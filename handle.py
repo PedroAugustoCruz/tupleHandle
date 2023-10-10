@@ -28,3 +28,11 @@ def incrementByHalf(tupla, novo_elemento):
   nova_tupla = tupla[0:metade] + (novo_elemento,) + tupla[metade:tamanho]
 
   return nova_tupla
+
+
+def incrementInStart(tupla, novo_elemento):
+  """Função que adiciona um elemento no começo da tupla"""  
+  tamanho = len(tupla)
+  nova_tupla = (novo_elemento,) + tupla[0:tamanho]
+  
+  return nova_tupla
