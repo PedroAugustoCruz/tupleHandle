@@ -32,7 +32,7 @@ def testType(novo_elemento):
 
 def incrementByPosition(tupla, novo_elemento, posicao):
   """Função que adiciona um novo elemento em uma tupla em um indice desejado"""
-  nova_tupla = tupla[0:posicao] + testType(novo_elemento) + tupla[posicao:final(tupla)]
+  nova_tupla = tupla[0:posicao] + tuple(novo_elemento,) + tupla[posicao:final(tupla)]
   return nova_tupla
 
 
