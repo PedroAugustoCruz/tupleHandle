@@ -1,19 +1,16 @@
 import handle
 
-
+"""Para passar varios argumento em formato de coleção, use * antes da coleção, como{*lista}"""
 lista = [1,2,3,4]
-tupla = ("Pedro", "BCMT", 19, 9.5, 8)
-tupei = tuple(lista)
-tupla_metade = handle.incrementByHalf(tupla, "pedro", -1)
-tupla_indice = handle.incrementByPosition(tupla, 1.5, 3)
-tupla_comeco = handle.incrementInStart(tupla, "primeiro período")
+tupla = ("Pedro", "BCMT", 19, 9.5)
+tupla_metade = handle.incrementByHalf(tupla, "pedro", "augusto", *lista, lista)
+tupla_indice = handle.incrementByPosition(tupla, 3, "pedro", "augusto", *lista, lista)
+tupla_comeco = handle.incrementInStart(tupla, "augusto", *lista, lista)
 
-print(tupla_metade)
-print(tupla_indice)
-print(tupla_comeco)
-
-
-
-print((tupla_indice[3]))
-
-print
+print(50*"-")
+print("adicionando na metade", tupla_metade, sep=" ")
+print(50*"-")
+print("adicionando pela posição", tupla_indice, sep=" ")
+print(50*"-")
+print("adicionando no começo", tupla_comeco, sep=" ")
+print(50*"-")
